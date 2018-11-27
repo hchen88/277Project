@@ -1,5 +1,6 @@
 package patternsProject;
 
-public class SuiteRoom extends Room{
-
+public class SuiteRoom extends MotelRoom{
+	
+	private static double cost = 100;
 }

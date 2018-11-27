@@ -2,10 +2,8 @@ package patternsProject;
 
 public class RoomFactory {
 	
-	
-	
-	public Room createRoom(String type) {
-		Room room = null;
+	public MotelRoom createRoom(String type) {
+		MotelRoom room = null;
 		
 		if(type.equals("regular")){
 			room = new RegularRoom();
