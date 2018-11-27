@@ -19,6 +19,7 @@ public class RoachMotel { //simple locking
 	}
 	
 	protected ArrayList<Integer> roomNumAv = new ArrayList<Integer>();
+	protected ArrayList<MotelRoom> rooms = new ArrayList<MotelRoom>();
 	
 	public void createRooms() {
 		roomNumAv.add(101);
@@ -29,7 +30,11 @@ public class RoachMotel { //simple locking
 	}
 	
 	public void checkIn(RoachColony colony, String roomType, ArrayList<String> amenities) {
-		
+		int roomNum = roomNumAv.get(0);
+		rooms.add(new MotelRoom(colony, roomType, amenities, roomNum, costPerNight));
+		roomNumAv.remove(0);
+		//cost per night (decorator for amenities)
+		System.out.println("Amenities: " + amenities + "\nCost per night: ");
 	}
 	
 	public String toString() {
